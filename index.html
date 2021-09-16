@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>FokQiang'blog</title>
+  <style>
+
+    #loading {
+      background-color: #fff;
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: 100vw;
+      z-index: 99999;
+      overflow: hidden;
+    }
+
+    .preloader-wrap .preloader {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: 50%;
+      left: 50%;
+      margin-left: -32px;
+      margin-top: -50px;
+    }
+
+    .preloader-wrap .preloader .dot {
+      height: 100%;
+      width: 100%;
+      display: block;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+      -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.15);
+      animation: la-rotateplane 1.2s infinite ease-in-out;
+      border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      background-color: #e94960;
+    }
+
+    @keyframes la-rotateplane {
+      0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+      }
+      50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+      }
+      100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      }
+    }
+
+    /*!**loading-bounce start**!
+    .loading-bounce {
+      width: 80px;
+      height: 40px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .loading-bounce span {
+      display: inline-block;
+      user-select: none;
+      width: 8px;
+      height: 100%;
+      border-radius: 4px;
+      background: #4715d8;
+      -webkit-animation: load 1s ease infinite;
+    }
+
+    .loading-bounce span:nth-child(2) {
+      -webkit-animation-delay: 0.2s;
+    }
+
+    .loading-bounce span:nth-child(3) {
+      -webkit-animation-delay: 0.4s;
+    }
+
+    .loading-bounce span:nth-child(4) {
+      -webkit-animation-delay: 0.6s;
+    }
+
+    .loading-bounce span:nth-child(5) {
+      -webkit-animation-delay: 0.8s;
+    }
+
+    @-webkit-keyframes load {
+      0%,
+      100% {
+        height: 40px;
+        background: #4715d8;
+      }
+      50% {
+        height: 70px;
+        margin: -15px 0;
+        background: #e94960;
+      }
+    }
+
+    !**loading-bounce end**!*/
+
+  </style>
+</head>
+<body>
+<!--<div id="loading">
+  <div class="loading-bounce">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>-->
+<div id="loading" class="preloader-wrap">
+  <div class="preloader">
+    <span class="dot"></span>
+    <div class="dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+</html>

@@ -1,0 +1,31 @@
+/*控制页面布局*/
+.container-fluid {
+  padding: 85px 2% 0;
+}
+
+/*面板颜色样式*/
+.panel {
+  background-color: @colorF;
+  border: none;
+  border-radius: @border-radius-base;
+  -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+  box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+  position: relative;
+
+  .panel-body {
+    padding-top: 0;
+  }
+}
+
+.panel-default > .panel-heading {
+  color: @colorE;
+  background-color: @colorF;
+  border-bottom: 0;
+  padding-top: 24px;
+  padding-bottom: 16px;
+
+  .panel-title {
+    font-size: @fontD;
+    color: @colorD;
+  }
+}
