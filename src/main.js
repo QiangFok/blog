@@ -8,7 +8,20 @@ import $ from 'jquery'
 import 'bootstrap/dist/js/bootstrap.min';
 
 //elementUI
-import {Button, Menu, MenuItem, MenuItemGroup, RadioGroup, RadioButton, Submenu,Popover,Collapse,CollapseItem,Table,TableColumn} from 'element-ui';
+import {
+  Button,
+  Menu,
+  MenuItem,
+  MenuItemGroup,
+  RadioGroup,
+  RadioButton,
+  Submenu,
+  Popover,
+  Collapse,
+  CollapseItem,
+  Table,
+  TableColumn
+} from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(Button)
@@ -52,6 +65,10 @@ Vue.use(mouse)
 
 // 全屏滚动
 import VueFullPage from 'vue-fullpage.js'
+
+// font Awesome
+import "font-awesome/css/font-awesome.min.css"
+
 
 Vue.use(VueFullPage)
 

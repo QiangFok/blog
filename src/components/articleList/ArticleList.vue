@@ -4,14 +4,14 @@
     <article class="full-width">
       <div class="inner">
         <div class="blog-post-thumb">
-          <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">
+          <router-link to="/article">
             <img src="https://blog.commoninja.com/wp-content/uploads/2021/06/duda-apps-main-image.jpg"
                  alt="Duda Apps and Plugins">
-          </a>
+          </router-link>
         </div>
         <div class="blog-post-content">
           <h3>
-            <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">8.1 类加载器&反射&http服务器改写</a>
+            <router-link to="/article">8.1 类加载器&反射&http服务器改写</router-link>
           </h3>
           <div class="blog-post-meta">
             <span class="blog-post-author">FoxQiang</span>
@@ -188,11 +188,14 @@
 </template>
 
 <script>
+
+
   export default {
     name: "ArticleList",
     data() {
       return {}
-    }
+    },
+    components: {}
   }
 </script>
 

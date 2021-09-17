@@ -112,7 +112,7 @@
               <h6>
                 <a href="#" class="active">全部</a>
               </h6>
-              <a href="#" v-for="item in 10">Announcements & Changelog</a>
+              <a href="#" v-for="(item,i) in 10" :key="i">Announcements & Changelog</a>
             </div>
           </aside>
         </div>
@@ -123,8 +123,8 @@
           <div class="showcase-items flex-wrapper">
             <article
               style="background-image: url(https://screenshots.commoninja.com/screenshots/53dbff45-0a08-40dc-937b-465896239850_bracket.jpg)"
-              v-for="item in 9"
-            >
+              v-for="(item,i) in 9"
+              :key="i">
               <div class="showcase-item-meta">
                 <a href="/brackets/lp/8cb0cb42-29b0-47ba-91b0-7930701a01df" target="_blank"
                    rel="noopener noreferrer"></a>
@@ -145,7 +145,8 @@
         <div class="row">
           <div class="col-md-3 col-sm-6 service-item">
             <div class="icon">
-              <i class="glyphicon glyphicon-euro"></i>
+              <i class="fa fa-address-book-o"></i>
+
               <span></span>
             </div>
             <h4>GRPHICE</h4>
@@ -581,6 +582,7 @@
       font-weight: 600;
       color: @colorA;
     }
+
     p {
       color: @colorF;
     }
@@ -835,6 +837,7 @@
       transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
     }
   }
+
   // contact me to get end
 
 

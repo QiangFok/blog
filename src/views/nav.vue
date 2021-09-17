@@ -1209,11 +1209,13 @@
         padding: 15px;
         border-radius: 4px;
         margin: 20px 0 20px 0;
-        background-color: @colorF;
         height: 90px;
         box-sizing: border-box;
-        cursor: pointer;
         transition: .3s ease-out;
+
+        &:hover{
+          background-color: @colorA;
+        }
 
         .list-item-img {
           margin-right: 20px;
