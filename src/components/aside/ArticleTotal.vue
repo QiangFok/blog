@@ -35,6 +35,7 @@
 <style lang="less" scoped>
   .list-group {
     display: flex;
+    align-items: flex-start;
     margin-bottom: 0;
 
     .list-group-item {
@@ -45,6 +46,7 @@
       line-height: 24px;
       font-weight: 500;
       background-color: transparent;
+      border-radius: 0;
 
       span {
         font-weight: normal;
