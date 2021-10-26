@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <div class="w1440">
+    <div class="">
       <div class="row">
         <header class="title">
           <slot name="title"></slot>
@@ -24,7 +24,7 @@
 
   .container-fluid {
     background-color: @colorA;
-    padding: 40px 0 0;
+    padding: 40px 2% 0;
     position: relative;
   }
 
@@ -51,33 +51,9 @@
     }
   }
 
-  .w1440 {
-    margin: 0 auto;
-    max-width: 1440px;
-    width: 100%;
-  }
-
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    padding: 0 0 140px;
-    position: relative;
-
-    .col-lg-3 {
-      flex-basis: 320px;
+  @media screen and (max-width: 520px) {
+    .title {
+      padding-bottom: 40px !important;
     }
-
-    .col-lg-9 {
-      flex: 1 1;
-    }
-  }
-
-  .col-lg-3 {
-    flex-basis: 320px;
-  }
-
-  .col-lg-9 {
-    flex: 1 1;
   }
 </style>

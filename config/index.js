@@ -10,10 +10,18 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/webapi': {
+        target: 'http://localhost:9004/', // 源地址
+        changeOrigin: true, // 改变源
+        pathRewrite: {
+          '^/webapi': ''
+        }
+      }
+    },
 
     // Various Dev Server settings
-    host: '192.168.3.17', // can be overwritten by process.env.HOST
+    host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

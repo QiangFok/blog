@@ -13,24 +13,26 @@
       </template>
 
       <template #main>
-        <table class="table table-hover">
-          <thead>
-          <tr>
-            <th>文件</th>
-            <th>产品说明</th>
-            <th>大小</th>
-            <th>下载</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr v-for="item in 12">
-            <td>jdk-8u202-windows-x64.exe</td>
-            <td>Java SE Development Kit 8u301</td>
-            <td>211.575MB</td>
-            <td><a href="">下载</a></td>
-          </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+            <tr>
+              <th>文件</th>
+              <th>产品说明</th>
+              <th>大小</th>
+              <th>下载</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(item,i) in 12" :key="i">
+              <td>jdk-8u202-windows-x64.exe</td>
+              <td>Java SE Development Kit 8u301</td>
+              <td>211.575MB</td>
+              <td><a href="">下载</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
       </template>
 
     </base-layout>
@@ -122,6 +124,12 @@
 
   .table-hover > tbody > tr:hover {
     background-color: @colorB;
+  }
+
+  @media (min-width: 750px) {
+    .el-collapse {
+      margin-bottom: 40px;
+    }
   }
 
 </style>

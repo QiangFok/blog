@@ -25,14 +25,6 @@ export default new Router({
           component: resolve => require(['@/views/file'], resolve),
         },
         {
-          path: '/tag',
-          component: resolve => require(['@/views/tag'], resolve),
-        },
-        {
-          path: '/resources',
-          component: resolve => require(['@/views/resources'], resolve),
-        },
-        {
           path: '/article',
           component: resolve => require(['@/views/article'], resolve),
         }
@@ -64,10 +56,6 @@ export default new Router({
     {
       path: '/about',
       component: resolve => require(['@/views/about'], resolve),
-    },
-    {
-      path: '/nav',
-      component: resolve => require(['@/views/nav'], resolve),
     }
   ]
 })

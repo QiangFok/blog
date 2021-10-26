@@ -7,35 +7,29 @@
       <!--热门-->
       <panel-list title="推荐">
         <template #list>
-          <li class="list-group-item" v-for="(item,i) in 10" :key="i"><a href="" class="qin">Vue 实现了一套内容分发的 API</a></li>
+          <li class="list-group-item" v-for="(item,i) in recommendList" :key="i">
+            <router-link to="" class="qin">{{item.title}}</router-link>
+          </li>
         </template>
       </panel-list>
 
       <!--分类-->
-      <classification classification-title="分类"></classification>
-
-      <!--归档-->
-      <panel-list title="归档">
-        <template #list>
-          <li class="list-group-item" v-for="(item,i) in 4" :key="i"><a href="" class="qin">Vue 实现了一套内容分发的 API</a></li>
-        </template>
-      </panel-list>
+      <classification classification-title="分类" :data="categoryList"/>
 
       <!--标签云-->
-      <label-cloud></label-cloud>
+      <label-cloud :data="labelList"/>
 
       <!--相册-->
-      <photo></photo>
+      <photo/>
 
       <!--书籍-->
       <panel-list title="书籍">
         <template #list>
-          <li class="list-group-item" v-for="(item,i) in 4" :key="i"><a href="" class="qin">Vue 实现了一套内容分发的 API</a></li>
+          <li class="list-group-item" v-for="(item,i) in bookList" :key="i">
+            <a href="">《 {{item.bookName}} 》</a>
+          </li>
         </template>
       </panel-list>
-
-      <!--友情链接-->
-      <links></links>
     </template>
 
     <template #main>
@@ -82,7 +76,33 @@
          </ul>
        </div>
    -->
-      <articleList :coms="coms"></articleList>
+      <article-list>
+        <template v-slot:recommendArticleList>
+          <article v-for="(item,index) in recommendList" :key="index"
+                   :class="[index%4 === 0  ? 'full-width' : '']"
+          >
+            <div class="inner">
+              <div class="blog-post-thumb">
+                <router-link to="">
+                  <img :src="item.coverImageUrl"
+                       alt="Duda Apps and Plugins">
+                </router-link>
+              </div>
+              <div class="blog-post-content">
+                <h3>
+                  <router-link to="">{{item.title}}</router-link>
+                </h3>
+                <div class="blog-post-meta">
+                  <span class="blog-post-author">{{item.authorName}}</span>
+                  <time>{{item.createdTime}}</time>
+                </div>
+                <p>{{item.description}}</p>
+                <a class="blog-read-more" href="javascript:;">继续</a>
+              </div>
+            </div>
+          </article>
+        </template>
+      </article-list>
 
     </template>
   </base-layout>
@@ -101,9 +121,25 @@
   import Links from "../components/aside/Links";
   import ArticleList from "../components/articleList/ArticleList";
   import BaseLayout from "../components/public/BaseLayout";
+  import {loadRecommend} from '../api/article';
+  import {loadCategoryList} from '../api/category'
+  import {loadLabelList} from '../api/labels'
+  import {loadBookList} from '../api/books'
 
   export default {
     name: 'index',
+    components: {
+      BaseLayout,
+      swiper,
+      swiperSlide,
+      Author,
+      PanelList,
+      Classification,
+      LabelCloud,
+      Photo,
+      Links,
+      ArticleList,
+    },
     data() {
       return {
         //swiper 初始化
@@ -126,25 +162,19 @@
             el: '.swiper-pagination'
           }
         },
-        coms: [
-          {
-            tag: 'web',
-            title: 'vue 父组件传值给子组件渲染',
-            desc: '前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端',
-            date: new Date(),
-            count: 80
-          },
-          {
-            tag: 'web',
-            title: 'vue 父组件传值给子组件渲染',
-            desc: '前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端',
-            date: new Date(),
-            count: 80
-          }
-        ],
         bannerPhoto: ["/static/banner/1.jpg", "/static/banner/2.jpg", "/static/banner/3.jpg", "/static/banner/4.jpg"],
-        isFixed: ''
+        isFixed: '',
+        recommendList: [],
+        categoryList: [],
+        labelList: [],
+        bookList: []
       }
+    },
+    created() {
+      this.fetchRecommendList()
+      this.fetchCategoryList()
+      this.fetchLabelList()
+      this.fetchBookList()
     },
     mounted() {
       let _this = this;
@@ -158,17 +188,44 @@
         }
       })
     },
-    components: {
-      BaseLayout,
-      swiper,
-      swiperSlide,
-      Author,
-      PanelList,
-      Classification,
-      LabelCloud,
-      Photo,
-      Links,
-      ArticleList,
+    methods: {
+      /*
+      * 获取推荐文章列表
+      * */
+      fetchRecommendList() {
+        loadRecommend().then((response) => {
+          if (response.code === 0) {
+            this.recommendList = response.data;
+          }
+        })
+      },
+      /**
+       *获取文章分类列表，并统计文章数量
+       */
+      fetchCategoryList() {
+        loadCategoryList().then((response) => {
+          if (response.code === 0) {
+            this.categoryList = response.data
+          }
+        })
+      },
+      /**
+       * 获取标签列表
+       */
+      fetchLabelList() {
+        loadLabelList().then((response) => {
+          if (response.code === 0) {
+            this.labelList = response.data
+          }
+        })
+      },
+      fetchBookList() {
+        loadBookList().then((response) => {
+          if (response.code === 0) {
+            this.bookList = response.data
+          }
+        })
+      }
     }
   }
 </script>
@@ -299,30 +356,9 @@
   }
 
 
-  @media screen and (max-width: 375px) {
-    .container-fluid {
-      padding: 85px 15px 15px;
-    }
-  }
-
-  /*iphone 6/7/8 Plus*/
-  @media screen and (max-width: 414px) {
-    .container-fluid {
-      padding: 85px 15px 15px;
-    }
-  }
-
-  /*iPad*/
-  @media screen and (max-width: 768px) {
-    .container-fluid {
-      padding: 85px 15px 15px;
-    }
-  }
-
-  /*iPad Pro*/
-  @media screen and (max-width: 1024px) {
-    .container-fluid {
-      padding: 85px 15px 15px;
+  @media (max-width: 750px) {
+    .swiper-container {
+      display: none;
     }
   }
 

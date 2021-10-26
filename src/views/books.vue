@@ -26,10 +26,10 @@
     </ul>
 
     <full-page :options="options" ref="fullpage">
-      <div class="section">
+      <div class="section" v-for="(item,i) in 6" :key="i">
         <div class="book-list">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-md-12 col-lg-12">
               <h2 class="book-title">图解HTTP </h2>
               <div class="book-wrapper w1440">
                 <article class="book-item" v-for="(item,index) in 12" :key="index">
@@ -52,41 +52,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="section">
-        <div class="slide">
-          <div style="height: 100vh">
-            <img width="100%"
-                 src="https://cdn.cnbj1.fds.api.mi-img.com/product-images/redminote9pro/section14-8.jpg"
-                 alt="">
-          </div>
-        </div>
-        <div class="slide">
-          <div style="height: 100vh">
-            <img width="100%"
-                 src="https://cdn.cnbj1.fds.api.mi-img.com/product-images/redminote9pro/section14-6.jpg"
-                 alt="">
-          </div>
-        </div>
-        <div class="slide">
-          <div style="height: 100vh">
-            <img width="100%"
-                 src="https://cdn.cnbj1.fds.api.mi-img.com/product-images/redminote9pro/section16-2.jpg"
-                 alt="">
-          </div>
-        </div>
-      </div>
-      <div class="section" style="text-align: center; font-size: 80px">
-        section2
-      </div>
-      <div class="section" style="text-align: center; font-size: 80px">
-        section3
-      </div>
-      <div class="section" style="text-align: center; font-size: 80px">
-        section4
-      </div>
-      <div class="section" style="text-align: center; font-size: 80px">
-        section5
       </div>
     </full-page>
   </div>
@@ -126,14 +91,6 @@
           // 则是一滚动就是一整屏
           scrollBar: false,
           //为每个section设置背景色
-          sectionsColor: [
-            "#161b22",
-            "#ff5f45",
-            "#0798ec",
-            "#fec401",
-            "#1bcee6",
-            "#ee1a59"
-          ]
           // onLeave: this.onLeave, //滚动前的回调函数，
           // afterLoad: this.afterLoad, //滚动到某一屏后的回调函数
           // afterRender: this.afterRender // 页面初始化完成后的回调函数
@@ -264,6 +221,48 @@
           }
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    .books .book-list .book-wrapper {
+      justify-content: center;
+
+      .book-item {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media (min-width: 750px) {
+
+    #menu {
+      width: 924px;
+      justify-content: center !important;
+    }
+
+    .books .book-list .book-wrapper {
+      justify-content: center;
+    }
+
+    .books .book-list .book-wrapper .book-item:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: 992px) {
+
+    #menu {
+      width: 924px;
+      justify-content: center !important;
+    }
+
+    .books .book-list .book-wrapper {
+      justify-content: center;
+    }
+
+    .books .book-list .book-wrapper .book-item:nth-child(4n) {
+      margin-right: 0;
     }
   }
 

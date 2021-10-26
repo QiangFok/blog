@@ -1,7 +1,7 @@
 <template>
   <div class="article-wrapper">
 
-    <article class="full-width">
+    <!--<article class="full-width">
       <div class="inner">
         <div class="blog-post-thumb">
           <router-link to="/article">
@@ -22,168 +22,8 @@
           <a class="blog-read-more" href="javascript:;">继续</a>
         </div>
       </div>
-    </article>
-
-    <article v-for="item in 3">
-      <div class="inner">
-        <div class="blog-post-thumb">
-          <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">
-            <img src="https://blog.commoninja.com/wp-content/uploads/2021/06/duda-apps-main-image.jpg"
-                 alt="Duda Apps and Plugins">
-          </a>
-        </div>
-        <div class="blog-post-content">
-          <h3>
-            <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">8.1 类加载器&反射&http服务器改写</a>
-          </h3>
-          <div class="blog-post-meta">
-            <span class="blog-post-author">FoxQiang</span>
-            <time datetime="2021-08-28T17:04:14">2021年1月1日</time>
-          </div>
-          <p>
-            1.类加载器1.1类加载器【理解】作用负责将.class文件（存储的物理文件）加载在到内存中1.2类加载的过程【理解】类加载时机创建类的实例（对象）</p>
-          <a class="blog-read-more" href="javascript:;">继续</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="full-width">
-      <div class="inner">
-        <div class="blog-post-thumb">
-          <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">
-            <img src="https://blog.commoninja.com/wp-content/uploads/2021/06/duda-apps-main-image.jpg"
-                 alt="Duda Apps and Plugins">
-          </a>
-        </div>
-        <div class="blog-post-content">
-          <h3>
-            <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">8.1 类加载器&反射&http服务器改写</a>
-          </h3>
-          <div class="blog-post-meta">
-            <span class="blog-post-author">FoxQiang</span>
-            <time datetime="2021-08-28T17:04:14">2021年1月1日</time>
-          </div>
-          <p>
-            1.类加载器1.1类加载器【理解】作用负责将.class文件（存储的物理文件）加载在到内存中1.2类加载的过程【理解】类加载时机创建类的实例（对象）</p>
-          <a class="blog-read-more" href="javascript:;">继续</a>
-        </div>
-      </div>
-    </article>
-
-    <article v-for="item in 3">
-      <div class="inner">
-        <div class="blog-post-thumb">
-          <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">
-            <img src="https://blog.commoninja.com/wp-content/uploads/2021/06/duda-apps-main-image.jpg"
-                 alt="Duda Apps and Plugins">
-          </a>
-        </div>
-        <div class="blog-post-content">
-          <h3>
-            <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">8.1 类加载器&反射&http服务器改写</a>
-          </h3>
-          <div class="blog-post-meta">
-            <span class="blog-post-author">FoxQiang</span>
-            <time datetime="2021-08-28T17:04:14">2021年1月1日</time>
-          </div>
-          <p>
-            1.类加载器1.1类加载器【理解】作用负责将.class文件（存储的物理文件）加载在到内存中1.2类加载的过程【理解】类加载时机创建类的实例（对象）</p>
-          <a class="blog-read-more" href="javascript:;">继续</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="full-width">
-      <div class="inner">
-        <div class="blog-post-thumb">
-          <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">
-            <img src="https://blog.commoninja.com/wp-content/uploads/2021/06/duda-apps-main-image.jpg"
-                 alt="Duda Apps and Plugins">
-          </a>
-        </div>
-        <div class="blog-post-content">
-          <h3>
-            <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">8.1 类加载器&反射&http服务器改写</a>
-          </h3>
-          <div class="blog-post-meta">
-            <span class="blog-post-author">FoxQiang</span>
-            <time datetime="2021-08-28T17:04:14">2021年1月1日</time>
-          </div>
-          <p>
-            1.类加载器1.1类加载器【理解】作用负责将.class文件（存储的物理文件）加载在到内存中1.2类加载的过程【理解】类加载时机创建类的实例（对象）</p>
-          <a class="blog-read-more" href="javascript:;">继续</a>
-        </div>
-      </div>
-    </article>
-
-    <article v-for="item in 3">
-      <div class="inner">
-        <div class="blog-post-thumb">
-          <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">
-            <img src="https://blog.commoninja.com/wp-content/uploads/2021/06/duda-apps-main-image.jpg"
-                 alt="Duda Apps and Plugins">
-          </a>
-        </div>
-        <div class="blog-post-content">
-          <h3>
-            <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">8.1 类加载器&反射&http服务器改写</a>
-          </h3>
-          <div class="blog-post-meta">
-            <span class="blog-post-author">FoxQiang</span>
-            <time datetime="2021-08-28T17:04:14">2021年1月1日</time>
-          </div>
-          <p>
-            1.类加载器1.1类加载器【理解】作用负责将.class文件（存储的物理文件）加载在到内存中1.2类加载的过程【理解】类加载时机创建类的实例（对象）</p>
-          <a class="blog-read-more" href="javascript:;">继续</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="full-width">
-      <div class="inner">
-        <div class="blog-post-thumb">
-          <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">
-            <img src="https://blog.commoninja.com/wp-content/uploads/2021/06/duda-apps-main-image.jpg"
-                 alt="Duda Apps and Plugins">
-          </a>
-        </div>
-        <div class="blog-post-content">
-          <h3>
-            <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">8.1 类加载器&反射&http服务器改写</a>
-          </h3>
-          <div class="blog-post-meta">
-            <span class="blog-post-author">FoxQiang</span>
-            <time datetime="2021-08-28T17:04:14">2021年1月1日</time>
-          </div>
-          <p>
-            1.类加载器1.1类加载器【理解】作用负责将.class文件（存储的物理文件）加载在到内存中1.2类加载的过程【理解】类加载时机创建类的实例（对象）</p>
-          <a class="blog-read-more" href="javascript:;">继续</a>
-        </div>
-      </div>
-    </article>
-
-    <article v-for="item in 3">
-      <div class="inner">
-        <div class="blog-post-thumb">
-          <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">
-            <img src="https://blog.commoninja.com/wp-content/uploads/2021/06/duda-apps-main-image.jpg"
-                 alt="Duda Apps and Plugins">
-          </a>
-        </div>
-        <div class="blog-post-content">
-          <h3>
-            <a href="/blog/10-must-have-duda-apps-for-a-high-functional-website">8.1 类加载器&反射&http服务器改写</a>
-          </h3>
-          <div class="blog-post-meta">
-            <span class="blog-post-author">FoxQiang</span>
-            <time datetime="2021-08-28T17:04:14">2021年1月1日</time>
-          </div>
-          <p>
-            1.类加载器1.1类加载器【理解】作用负责将.class文件（存储的物理文件）加载在到内存中1.2类加载的过程【理解】类加载时机创建类的实例（对象）</p>
-          <a class="blog-read-more" href="javascript:;">继续</a>
-        </div>
-      </div>
-    </article>
+    </article>-->
+    <slot name="recommendArticleList"></slot>
   </div>
 </template>
 
@@ -342,6 +182,35 @@
         height: 100%;
         object-fit: cover;
       }
+    }
+  }
+
+  @media (max-width: 520px) {
+
+    .article-wrapper article.full-width .inner {
+      flex-direction: column;
+    }
+
+    .article-wrapper article {
+      line-height: 1.5em;
+      width: 100%;
+      padding: 0 !important;
+
+      .blog-post-content {
+        padding: 8px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .article-wrapper article .inner .blog-post-content {
+      padding: 20px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .article-wrapper article .inner .blog-post-content {
+      padding: 20px;
     }
   }
 

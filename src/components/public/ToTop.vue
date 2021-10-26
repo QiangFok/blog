@@ -62,7 +62,7 @@
 <style scoped>
   .goTop {
     position: fixed;
-    right: -1.9%;
+    right: -10.9%;
     bottom: 9%;
     width: 30px;
     height: 30px;

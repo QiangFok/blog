@@ -5,11 +5,11 @@
     </div>
     <div class="panel-body">
       <ul class="list-group">
-        <li class="list-group-item" v-for="(item,i) in 26">
+        <li class="list-group-item" v-for="(item,i) in data" :key="i">
           <a href="">
             <img src="/static/java.jpeg" alt="">
-            <span class="title qin">JavaSE</span>
-            <span class="count">20篇</span>
+            <span class="title qin">{{item.categoryName}}</span>
+            <span class="count">{{item.articleTotal}} 篇</span>
           </a>
         </li>
       </ul>
@@ -22,7 +22,11 @@
     name: "Classification",
     props: {
       classificationTitle: {
-        type : String,
+        type: String,
+        require: true
+      },
+      data: {
+        type: Array,
         require: true
       }
     }
@@ -33,7 +37,7 @@
 
   @import "../../styles/config";
 
-  .list-group{
+  .list-group {
     margin-bottom: 0;
   }
 
@@ -52,17 +56,20 @@
       transition: color .2s ease;
       display: flex;
       line-height: 28px;
-      img{
+
+      img {
         width: 28px;
         height: 28px;
         margin-right: 12px;
         border-radius: 4px;
       }
-      .title{
+
+      .title {
         flex: 1;
         width: auto;
       }
-      .count{
+
+      .count {
         color: @colorC;
         font-size: 12px;
       }

@@ -5,22 +5,7 @@
     </div>
     <div class="panel-body">
       <div class="tagcloud">
-        <a href="#">文献综述</a>
-        <a href="#">对外投资</a>
-        <a href="#">机器人</a>
-        <a href="#">区块链</a>
-        <a href="#">科技创新</a>
-        <a href="#">计算机科学</a>
-        <a href="#">自动驾驶</a>
-        <a href="#">研究价值</a>
-        <a href="#">机器人</a>
-        <a href="#">区块链</a>
-        <a href="#">科技创新</a>
-        <a href="#">计算机科学</a>
-        <a href="#">自动驾驶</a>
-        <a href="#">研究价值</a>
-        <a href="#">模式识别</a>
-        <a href="#">自然语言处理</a>
+        <a href="#" v-for="(item,index) in data" :key="index">{{item}}</a>
       </div>
     </div>
   </div>
@@ -32,10 +17,19 @@
 
   export default {
     name: "LabelCloud",
+    props: {
+      data: {
+        type: Array,
+        require: true
+      }
+    },
     data() {
       return {}
     },
-    mounted() {
+    /**
+     * 视图层数据更新后调用
+     */
+    updated() {
       /*3D标签云*/
       tagcloud({
         selector: ".tagcloud", //元素选择器
@@ -75,6 +69,24 @@
     /*兼容ie7/8*/
     filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=125, Strength=9);
     /*strength是阴影大小，direction是阴影方位，单位为度，可以为负数，color是阴影颜色 （尽量使用数字）使用IE滤镜实现盒子阴影的盒子必须是行元素或以行元素显示（block或inline-block;）*/
+  }
+
+  @media screen and (max-width: 520px) {
+    .tagcloud {
+      min-width: 310px !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .tagcloud {
+      min-width: 310px !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .tagcloud {
+      min-width: 310px !important;
+    }
   }
 
 </style>

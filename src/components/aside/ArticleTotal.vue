@@ -12,7 +12,7 @@
     </div>
     <div class="panel-body">
       <ul class="list-group">
-        <li class="list-group-item" v-for="(item,i) in 4">
+        <li class="list-group-item" v-for="(item,i) in 4" :key="i">
           原创文章： <span>100篇</span>
         </li>
       </ul>
@@ -51,6 +51,12 @@
       span {
         font-weight: normal;
       }
+    }
+  }
+
+  @media (min-width: 750px) {
+    .list-group {
+      justify-content: space-between;
     }
   }
 </style>

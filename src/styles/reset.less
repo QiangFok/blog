@@ -4,13 +4,18 @@ html, body, #app {
   height: 100%;
 }
 
+@media screen and (max-width: 520px) {
+  html, body, #app {
+    overflow-x: hidden;
+  }
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, "微软雅黑";
   background-color: @colorA;
   color: @colorE;
   font-weight: 300;
   font-size: @fontI;
-  overflow-x: hidden;
 }
 
 section, aside, article, div, ul, li, p, em, i {

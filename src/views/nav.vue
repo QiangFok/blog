@@ -38,7 +38,7 @@
             <i :id="item.id + (i + 1)"></i>{{item.listTitle + (i + 1)}}
           </h4>
           <div class="row list-content">
-            <div class="list-item col-lg-2" v-for="(itemList,j) in item.listItem" :key="j">
+            <div class="list-item col-xs-6 col-lg-2" v-for="(itemList,j) in item.listItem" :key="j">
               <div class="list-item-img">
                 <img :src="itemList.imgSrc" :alt="itemList.alt">
               </div>
@@ -1213,7 +1213,7 @@
         box-sizing: border-box;
         transition: .3s ease-out;
 
-        &:hover{
+        &:hover {
           background-color: @colorA;
         }
 
@@ -1238,6 +1238,16 @@
           }
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 520px) {
+    .container-fluid {
+      padding: 0 10px;
+    }
+
+    .main .list-content .list-item {
+      padding: 12px;
     }
   }
 

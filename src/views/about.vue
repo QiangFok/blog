@@ -16,12 +16,12 @@
         <h2>关于<em>我</em></h2>
       </template>
       <template #left>
-        <div class="col-sm-5 about-image">
+        <div class="col-md-4 col-lg-5 about-image">
           <img src="/static/avator.jpg" class="img-responsive" alt="">
         </div>
       </template>
       <template #right>
-        <div class="col-lg-7">
+        <div class="col-md-8 col-lg-7">
           <div class="about-text">
             <p>
               东方平原的霸主。和东方帝国、朱拉森林周边国家进行贸易的商人都对他们很头大。每一只牙狼族成员都相当于C级魔物，稍有不慎，就连老手冒险者都会在瞬间被他们咬死。不过，真正可怕的是集体行动。若带头者很优秀，牙狼族将能发挥真本事。群集时成为一心同体的魔物，行动上整齐划一。此外，当他们群聚时的等级相当于B。
@@ -106,7 +106,7 @@
         <h2>我的<em>项目</em>示例</h2>
       </template>
       <template #left>
-        <div class="col-lg-3">
+        <div class="col-sm-5 col-md-4 col-lg-3">
           <aside class="my-project-list">
             <div>
               <h6>
@@ -119,7 +119,7 @@
       </template>
 
       <template #right>
-        <div class="col-lg-9">
+        <div class="col-sm-7 col-md-8 col-lg-9">
           <div class="showcase-items flex-wrapper">
             <article
               style="background-image: url(https://screenshots.commoninja.com/screenshots/53dbff45-0a08-40dc-937b-465896239850_bracket.jpg)"
@@ -140,124 +140,124 @@
       </template>
     </about-layout>
 
-    <section class="services-section spad">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 col-sm-6 service-item">
-            <div class="icon">
-              <i class="fa fa-address-book-o"></i>
+    <!-- <section class="services-section spad">
+       <div class="container">
+         <div class="row">
+           <div class="col-md-3 col-sm-6 service-item">
+             <div class="icon">
+               <i class="fa fa-address-book-o"></i>
 
-              <span></span>
-            </div>
-            <h4>GRPHICE</h4>
-            <p>We are gives you best graphic and website services. </p>
-          </div>
+               <span></span>
+             </div>
+             <h4>GRPHICE</h4>
+             <p>We are gives you best graphic and website services. </p>
+           </div>
 
-          <div class="col-md-3 col-sm-6 service-item">
-            <div class="icon">
-              <i class="glyphicon glyphicon-euro"></i>
-              <span></span>
-            </div>
-            <h4>BRANDING</h4>
-            <p>We are gives you best graphic and website services.</p>
-          </div>
+           <div class="col-md-3 col-sm-6 service-item">
+             <div class="icon">
+               <i class="glyphicon glyphicon-euro"></i>
+               <span></span>
+             </div>
+             <h4>BRANDING</h4>
+             <p>We are gives you best graphic and website services.</p>
+           </div>
 
-          <div class="col-md-3 col-sm-6 service-item">
-            <div class="icon">
-              <i class="glyphicon glyphicon-euro"></i>
-              <span></span>
-            </div>
-            <h4>PHOTOGRAPHY</h4>
-            <p>We are gives you best graphic and website services.</p>
-          </div>
+           <div class="col-md-3 col-sm-6 service-item">
+             <div class="icon">
+               <i class="glyphicon glyphicon-euro"></i>
+               <span></span>
+             </div>
+             <h4>PHOTOGRAPHY</h4>
+             <p>We are gives you best graphic and website services.</p>
+           </div>
 
-          <div class="col-md-3 col-sm-6 service-item">
-            <div class="icon">
-              <i class="glyphicon glyphicon-euro"></i>
-              <span></span>
-            </div>
-            <h4>CUSTOMIZATION</h4>
-            <p>We are gives you best graphic and website services.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+           <div class="col-md-3 col-sm-6 service-item">
+             <div class="icon">
+               <i class="glyphicon glyphicon-euro"></i>
+               <span></span>
+             </div>
+             <h4>CUSTOMIZATION</h4>
+             <p>We are gives you best graphic and website services.</p>
+           </div>
+         </div>
+       </div>
+     </section>-->
 
-    <about-layout>
-      <template #title>
-        <h2><em>好</em>，常联系</h2>
-      </template>
+    <!--  <about-layout>
+        <template #title>
+          <h2><em>好</em>，常联系</h2>
+        </template>
 
-      <template #left>
-        <div class="col-lg-6">
-          <ul class="contact-list">
-            <li>
-              <div class="contact-item">
-                <div class="cd-icon"><span class="glyphicon glyphicon-envelope"></span></div>
-                <div class="cd-info">
-                  <a href="">
-                    <span>[email protected]</span>
-                  </a>
+        <template #left>
+          <div class="col-lg-6">
+            <ul class="contact-list">
+              <li>
+                <div class="contact-item">
+                  <div class="cd-icon"><span class="glyphicon glyphicon-envelope"></span></div>
+                  <div class="cd-info">
+                    <a href="">
+                      <span>[email protected]</span>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <div class="contact-item">
-                <div class="cd-icon"><span class="glyphicon glyphicon-home"></span></div>
-                <div class="cd-info">
-                  <a href="">
-                    <span>[email protected]</span>
-                  </a>
+              </li>
+              <li>
+                <div class="contact-item">
+                  <div class="cd-icon"><span class="glyphicon glyphicon-home"></span></div>
+                  <div class="cd-info">
+                    <a href="">
+                      <span>[email protected]</span>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <div class="contact-item">
-                <div class="cd-icon"><span class="glyphicon glyphicon-earphone"></span></div>
-                <div class="cd-info">
-                  <a href="">
-                    <span>[email protected]</span>
-                  </a>
+              </li>
+              <li>
+                <div class="contact-item">
+                  <div class="cd-icon"><span class="glyphicon glyphicon-earphone"></span></div>
+                  <div class="cd-info">
+                    <a href="">
+                      <span>[email protected]</span>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <div class="contact-item">
-                <div class="cd-icon"><span class="glyphicon glyphicon-earphone"></span></div>
-                <div class="cd-info">
-                  <a href="">
-                    <span>[email protected]</span>
-                  </a>
+              </li>
+              <li>
+                <div class="contact-item">
+                  <div class="cd-icon"><span class="glyphicon glyphicon-earphone"></span></div>
+                  <div class="cd-info">
+                    <a href="">
+                      <span>[email protected]</span>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </template>
+              </li>
+            </ul>
+          </div>
+        </template>
 
-      <template #right>
-        <div class="col-lg-6 contact-form">
-          <form action="#" method="post" id="contact-form">
-            <div>
-              <input type="text" name="name" id="name" placeholder="Full name" class="form-control">
-            </div>
-            <div>
-              <input type="email" name="email" id="email" placeholder="Email" class="form-control">
-            </div>
-            <div>
-              <input type="text" name="subject" id="subject" placeholder="Subject" class="form-control">
-            </div>
-            <div>
-                <textarea placeholder="Message" name="text" id="text" class="form-control" cols="30" rows="10"
-                          style="height: 253px;"></textarea>
-            </div>
-            <div>
-              <button type="submit" id="contact-btn" class="submit-btn">Send Message</button>
-            </div>
-          </form>
-        </div>
-      </template>
-    </about-layout>
+        <template #right>
+          <div class="col-lg-6 contact-form">
+            <form action="#" method="post" id="contact-form">
+              <div>
+                <input type="text" name="name" id="name" placeholder="Full name" class="form-control">
+              </div>
+              <div>
+                <input type="email" name="email" id="email" placeholder="Email" class="form-control">
+              </div>
+              <div>
+                <input type="text" name="subject" id="subject" placeholder="Subject" class="form-control">
+              </div>
+              <div>
+                  <textarea placeholder="Message" name="text" id="text" class="form-control" cols="30" rows="10"
+                            style="height: 253px;"></textarea>
+              </div>
+              <div>
+                <button type="submit" id="contact-btn" class="submit-btn">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </template>
+      </about-layout>-->
 
     <bottom></bottom>
     <to-top></to-top>
@@ -562,6 +562,8 @@
   }
 
   .load-more {
+    padding-bottom: 20px;
+
     a {
       font-size: @fontD;
       color: @colorB;
@@ -666,7 +668,6 @@
     opacity: 1;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    opacity: 1;
   }
 
   // service module end
@@ -838,39 +839,49 @@
     }
   }
 
-  // contact me to get end
+  @media screen and (max-width: 520px) {
 
+    .intro-section .intro-content h1 {
+      font-size: 60px;
+      margin-right: 40px;
+    }
 
-  @media screen and (max-width: 1024px) {
-    .work .work_filter .mix {
-      width: 33%;
+    .about-text{
+      margin-top: 24px;
+    }
+
+    .my-project-list > div, .showcase-items {
+      align-items: center;
+      justify-content: center;
+    }
+
+    .showcase-items article {
+      margin-left: 0;
+    }
+
+  }
+
+  @media (max-width: 750px) {
+    .showcase-items {
+      justify-content: space-evenly;
     }
   }
 
-  @media screen and (max-width: 768px) {
-    .work .work_filter .mix {
-      width: 50%;
+  @media (min-width: 992px) {
+
+    .intro-section {
+      height: 50%;
+    }
+
+    .showcase-items article {
+      flex-basis: 298px;
     }
   }
 
-  @media screen and (max-width: 640px) {
-  }
-
-  @media only screen and (max-width: 480px) {
-    h1, .h1 {
-      font-size: 22px !important;
+  @media (min-width: 1200px) {
+    .showcase-items article {
+      flex-basis: 318px;
     }
-
-    .work .work_filter .mix {
-      width: 100%;
-    }
-
-    .work .work_filter .mix .mix_sec .imageContainer a.overlayText {
-      padding: 35% 10px;
-    }
-  }
-
-  @media only screen and (max-width: 320px) {
   }
 
 </style>

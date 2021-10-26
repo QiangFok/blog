@@ -6,7 +6,6 @@
           <figcaption>
             <h2>霍强</h2>
             <p class="qin">当一个人,对自己失去信心的时候,他才是真的过时了.</p>
-            <p class="qin">www.huoqiang.site</p>
           </figcaption>
           <img src="../../../static/user.jpg" alt="sample8"/>
           <div class="position">Java程序猿</div>
@@ -32,8 +31,6 @@
       position: relative;
       overflow: hidden;
       margin: 10px auto;
-      min-width: 380px;
-      max-width: 480px;
       width: 100%;
       color: @colorE;
 
@@ -101,6 +98,10 @@
   figure.snip:hover > img,
   figure.snip.hover > img {
     right: -12%;
+  }
+
+  @media (min-width: 768px) {
+
   }
 
 </style>
